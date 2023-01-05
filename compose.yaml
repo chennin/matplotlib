@@ -1,0 +1,11 @@
+# template version 2022.4
+
+services:
+  build:
+    entrypoint:
+      - /bin/sh
+      - build.sh
+    image: python:${IMAGE_TAG}
+    volumes:
+      - ./:/workspace
+    working_dir: /workspace
